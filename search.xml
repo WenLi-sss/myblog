@@ -9,8 +9,12 @@
       </tags>
   </entry>
   <entry>
-    <title>搭建HEXO博客</title>
+    <title>利用阿里云搭建HEXO博客</title>
     <url>/2020/08/27/%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>参考链接：<a href="https://blog.csdn.net/NoCortY/article/details/99631249">从零搭建Hexo博客并部署阿里云服务器</a></p>
+<h3 id="some-tips"><a href="#some-tips" class="headerlink" title="some tips"></a>some tips</h3><h3 id="一、服务器环境搭建，这里我们选择下载nginx安装包进行编译"><a href="#一、服务器环境搭建，这里我们选择下载nginx安装包进行编译" class="headerlink" title="一、服务器环境搭建，这里我们选择下载nginx安装包进行编译"></a>一、服务器环境搭建，这里我们选择下载nginx安装包进行编译</h3><p>编译环境:CENTOS 7</p>
+<p>1：gcc安装</p>
+<p>​    yum install gcc-c++</p>
+]]></content>
   </entry>
 </search>
