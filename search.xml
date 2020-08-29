@@ -18,8 +18,14 @@
   </entry>
   <entry>
     <title>图片</title>
+    <url>/2020/08/29/%E5%9B%BE%E7%89%87-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>图片</title>
     <url>/2020/08/29/%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<p><img src="F:\lw\WEB\myblog\themes\next\source\images\20200829.jpg" alt="avatar"></p>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;![some thing](图片&#x2F;20200829.jpg)</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>life</category>
