@@ -24,8 +24,7 @@
   <entry>
     <title>图片</title>
     <url>/2020/08/29/%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![some thing](图片&#x2F;20200829.jpg)</span><br></pre></td></tr></table></figure>
-
+    <content><![CDATA[<p><img src="/.com//20200829.jpg" alt="some thing"></p>
 ]]></content>
       <categories>
         <category>life</category>
