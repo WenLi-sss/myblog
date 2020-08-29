@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JS笔记</title>
+    <url>/2020/08/28/JS%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Javascripts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>利用阿里云搭建HEXO博客</title>
     <url>/2020/08/27/%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>参考链接：<a href="https://blog.csdn.net/NoCortY/article/details/99631249">从零搭建Hexo博客并部署阿里云服务器</a></p>
@@ -53,14 +61,6 @@
 ]]></content>
       <tags>
         <tag>BLOG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS笔记</title>
-    <url>/2020/08/28/JS%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>Javascripts</tag>
       </tags>
   </entry>
 </search>
