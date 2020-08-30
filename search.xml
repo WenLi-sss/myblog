@@ -13,6 +13,8 @@
     <title>JavaScripts运算符笔记</title>
     <url>/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>2020.8.30记</p>
+<a id="more"></a>
+
 <h3 id="1-运算符"><a href="#1-运算符" class="headerlink" title="1.运算符"></a>1.运算符</h3><p>表达式: 由运算符连接的操作数据，所组成的形式。</p>
 <p>运算符分为算术运算符、比较运算符、逻辑运算符、位运算符、赋值运算符、三目运算符</p>
 <h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="(1)算术运算符"></a>(1)算术运算符</h4><p>  +  -  *  /  % ++  –</p>
