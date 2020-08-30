@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2020.8.30记 1.运算符表达式: 由运算符连接的操作数据，所组成的形式。 运算符分为算术运算符、比较运算符、逻辑运算符、位运算符、赋值运算符、三目运算符 (1)算术运算符  +  -  *  &#x2F;  % ++  –   %  取余 1234&#x2F;&#x2F;取余console.log(3%2);&#x2F;&#x2F;1console.log(2%3);&#x2F;&#x2F;2console.log(-2%3);&#x2F;&#x2F;-2    ++ 自增，在">
+  <meta name="description" content="2020.8.30记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScripts运算符笔记">
-<meta property="og:url" content="http://yoursite.com/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="JavaScripts数据类型笔记">
+<meta property="og:url" content="http://yoursite.com/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B01/index.html">
 <meta property="og:site_name" content="李文のBLOG">
-<meta property="og:description" content="2020.8.30记 1.运算符表达式: 由运算符连接的操作数据，所组成的形式。 运算符分为算术运算符、比较运算符、逻辑运算符、位运算符、赋值运算符、三目运算符 (1)算术运算符  +  -  *  &#x2F;  % ++  –   %  取余 1234&#x2F;&#x2F;取余console.log(3%2);&#x2F;&#x2F;1console.log(2%3);&#x2F;&#x2F;2console.log(-2%3);&#x2F;&#x2F;-2    ++ 自增，在">
+<meta property="og:description" content="2020.8.30记">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-30T08:23:18.000Z">
-<meta property="article:modified_time" content="2020-08-30T08:55:09.903Z">
+<meta property="article:published_time" content="2020-08-30T07:15:07.000Z">
+<meta property="article:modified_time" content="2020-08-30T08:55:39.862Z">
 <meta property="article:author" content="李文">
 <meta property="article:tag" content="JavaScripts">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://yoursite.com/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B01/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>JavaScripts运算符笔记 | 李文のBLOG</title>
+  <title>JavaScripts数据类型笔记 | 李文のBLOG</title>
   
 
 
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JavaScripts运算符笔记
+          JavaScripts数据类型笔记
         </h1>
 
         <div class="post-meta">
@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-08-30 16:23:18 / 修改时间：16:55:09" itemprop="dateCreated datePublished" datetime="2020-08-30T16:23:18+08:00">2020-08-30</time>
+              <time title="创建时间：2020-08-30 15:15:07 / 修改时间：16:55:39" itemprop="dateCreated datePublished" datetime="2020-08-30T15:15:07+08:00">2020-08-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,50 +252,79 @@
 
       
         <p>2020.8.30记</p>
-<h3 id="1-运算符"><a href="#1-运算符" class="headerlink" title="1.运算符"></a>1.运算符</h3><p>表达式: 由运算符连接的操作数据，所组成的形式。</p>
-<p>运算符分为算术运算符、比较运算符、逻辑运算符、位运算符、赋值运算符、三目运算符</p>
-<h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="(1)算术运算符"></a>(1)算术运算符</h4><p>  +  -  *  /  % ++  –</p>
-<p>  %  取余</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//取余</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>%<span class="number">2</span>);<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>%<span class="number">3</span>);<span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">-2</span>%<span class="number">3</span>);<span class="comment">//-2</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
-<p>  ++ 自增，在原来的基础之上加1</p>
-<p>  –  自减，在原来的基础之上减1</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num++); <span class="comment">//先打印num的值1，再执行自增</span></span><br><span class="line"><span class="built_in">console</span>.log(++num); <span class="comment">//先执行自增，再打印num的值2</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h3><p> 数据分为原始类型和引用类型</p>
+<p> 原始类型分为数值型、字符串型、布尔型、未定义型、空</p>
+<h4 id="1-数值型"><a href="#1-数值型" class="headerlink" title="(1)数值型"></a>(1)数值型</h4><p> 分为整型和浮点型</p>
+<p> 整型在内存中占4个字节，浮点型占8个字节</p>
+<p> 八进制  以0开头， 例如 013 -&gt; 11</p>
+<p> 十六进制  以0X开头，  例如  0XA -&gt; 10</p>
+<p>  A F 代表10 15   不区分大小写</p>
+<p>  0XFF -&gt; 255</p>
+<p> 浮点型分为普通小数和指数型小数</p>
+<p>  3.14E6  -&gt;  31400000</p>
+<p>  3.14E-6  -&gt;  0.00000314</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//十进制</span></span><br><span class="line"><span class="keyword">var</span> num1=<span class="number">12</span>;<span class="comment">//12</span></span><br><span class="line"><span class="comment">//八进制</span></span><br><span class="line"><span class="keyword">var</span> num2=<span class="number">013</span>;<span class="comment">//11</span></span><br><span class="line"><span class="comment">//十六进制</span></span><br><span class="line"><span class="keyword">var</span> num3=<span class="number">0XF</span>;<span class="comment">//15</span></span><br><span class="line"><span class="keyword">var</span> num5=<span class="number">3.14E6</span>;<span class="comment">//3140000  </span></span><br><span class="line"><span class="keyword">var</span> num6=<span class="number">3.14E-6</span>;<span class="comment">//0.00000314 </span></span><br></pre></td></tr></table></figure>
 
-<p>  练习：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num-- + --num); <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+<p>typeof 检测数据类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num5=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num6);</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="(2)比较运算符"></a>(2)比较运算符</h4><p> &gt;  &lt;  &gt;=  &lt;=  !=  ==  ===(全等于)  !== 全不等于</p>
-<p> 返回一个布尔型的值</p>
-<p> == 只是比较两个值是否相等</p>
-<p> ===  不仅比较值，还会比较类型是否相等</p>
-<p>如果数据类型不同，会发生数据类型转换</p>
-<p> 3&gt;’10’  字符串转成数字10</p>
-<p> ‘3’&gt;’10’  <strong>两个字符串比较的是Unicode码</strong></p>
-<p> 3&gt;’10a’ //false</p>
-<p> 3&lt;’10a’ //false</p>
-<p> 3==’10a’ //false</p>
-<p>   ‘10a’  -&gt; NaN</p>
-<p>  NaN和任何值比较(&gt; &lt; &gt;= &lt;= == ===)都返回false</p>
-<p>  NaN==NaN  返回false</p>
-<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="(3)逻辑运算符"></a>(3)逻辑运算符</h4><p>  或者( || )  关联的两个条件只需要满足其一, 结果是true，否则false</p>
-<p>  并且( &amp;&amp; )  关联的两个条件都是true，结果是true，否则false  </p>
-<p>  非(反向) !   !false -&gt; true  !true -&gt; false</p>
-<p> <strong>逻辑短路</strong></p>
-<p>  &amp;&amp; 当第一个条件为false的时候，就不需要再执行第二个条件</p>
-<p>  ||  当第一个条件为true的时候，就不需要再执行第二个条件</p>
-<p>  注意：逻辑短路无需关注最终结果是true还是false，重点是看是否会执行第二个表达式。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//练习：声明变量保存一个人的年龄，如果满18岁，打印&#x27;成年人&#x27;</span></span><br><span class="line"><span class="keyword">var</span> age=<span class="number">11</span>;</span><br><span class="line">age&gt;=<span class="number">18</span> &amp;&amp; <span class="built_in">console</span>.log(<span class="string">&#x27;成年人&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="2-字符串型"><a href="#2-字符串型" class="headerlink" title="(2)字符串型"></a>(2)字符串型</h4><p> 数据被引号包含就是字符串类型，不区分单双引号</p>
+<p>  查看任意一个字符的Unicode码</p>
+<p>   ‘a’.charCodeAt()  //97]</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="string">&#x27;字&#x27;</span>.charCodeAt() );<span class="comment">//查看自己姓名的Unicode码</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="4-位运算符-了解"><a href="#4-位运算符-了解" class="headerlink" title="(4)位运算符(了解)"></a>(4)位运算符(了解)</h4><p>  在执行运算的时候，计算机会把数据转成二进制进行运算。</p>
-<p> 1 1011  100  101  110  111  1000  1001  1010</p>
-<p>  2    4           8</p>
-<p> 按位与( &amp; ) 上下两位都是1，结果是1，否则是0</p>
-<p> 按位或( | ) 上下两位含有1，结果是1，否则是0</p>
-<p> 按位异或( ^ ) 上下两位不同为1，相同为0</p>
-<p> 按位右移( &gt;&gt; ) 删除二进制的最后一位或者多位，每次缩小到原来的一半或者更多。</p>
-<p> 按位左移( &lt;&lt; ) 在二进制的最后添加0，成倍增加</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>&amp;<span class="number">7</span>);<span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">7</span>|<span class="number">9</span>);<span class="comment">//15</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">13</span>|<span class="number">20</span>);<span class="comment">//29</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">4</span>^<span class="number">7</span>);<span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>^<span class="number">8</span>);<span class="comment">//13</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">120</span>&gt;&gt;<span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>&lt;&lt;<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="3-布尔型"><a href="#3-布尔型" class="headerlink" title="(3)布尔型"></a>(3)布尔型</h4><p> true/false</p>
+<p> 在程序中表示真或者假</p>
+<p> 一般用于是否的结果，例如是否登录，是否注册，是否在售，是否为会员…</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isLogin=<span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> isIndex=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(isLogin,<span class="keyword">typeof</span> isIndex);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-未定义型"><a href="#4-未定义型" class="headerlink" title="(4)未定义型"></a>(4)未定义型</h4><p> 声明了变量未赋值，结果就是undefined </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age;</span><br><span class="line"><span class="built_in">console</span>.log(age,<span class="keyword">typeof</span> age);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-空——null"><a href="#5-空——null" class="headerlink" title="(5)空——null"></a>(5)空——null</h4><p> 常和引用类型数据一起使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=<span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-数据类型转换"><a href="#2-数据类型转换" class="headerlink" title="2.数据类型转换"></a>2.数据类型转换</h3><h4 id="1-隐式转换"><a href="#1-隐式转换" class="headerlink" title="(1)隐式转换"></a>(1)隐式转换</h4><p>  ①数字+字符串  数字转换成字符串</p>
+<p>   1+’2’  // ‘12’</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="number">1</span>+<span class="string">&#x27;2&#x27;</span>; </span><br><span class="line"><span class="built_in">console</span>.log(str1,<span class="keyword">typeof</span> str1);<span class="comment">// &#x27;12&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>  ②数字+布尔型  布尔型转成数字 true-&gt;1 false-&gt;0</p>
+<p>   3+true  //4</p>
+<p>   3+false  //3</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">3</span>+<span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num,<span class="keyword">typeof</span> num);</span><br></pre></td></tr></table></figure>
+
+<p>  ③字符串+布尔型 布尔型转成字符串</p>
+<p>   ‘5’+true  //‘5true’</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str3=<span class="string">&#x27;5&#x27;</span>+<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str3,<span class="keyword">typeof</span> str3);<span class="comment">//&#x27;5true&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>  JS中加号(+)的作用</p>
+<p>   执行加法运算</p>
+<p>   执行字符串拼接</p>
+<p>  减法(-)、乘法(*)、除法(/) 隐式换行</p>
+<p>   将运算符两端的数据转为数值型(自动调用Number)，如果转换失败，返回NaN(Not a Number)，不是一个数字，任何值和NaN执行减乘除运算符都会返回NaN</p>
+<h4 id="2-强制转换"><a href="#2-强制转换" class="headerlink" title="(2)强制转换"></a>(2)强制转换</h4><p> ①将任意的数据强制转为数值型</p>
+<p>  Number()</p>
+<p>Number(‘a’);  //NaNNumber(‘1’);  //1Number(‘1a’);  //NaNNumber(undefined);  //NaNNumber(null);  //0Number(true);  //1</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将任意的数据强制转为数值型</span></span><br><span class="line"><span class="keyword">var</span> num1=<span class="built_in">Number</span>(<span class="string">&#x27;a&#x27;</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">var</span> num2=<span class="built_in">Number</span>(<span class="literal">undefined</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">var</span> num3=<span class="built_in">Number</span>(<span class="literal">null</span>);<span class="comment">//0</span></span><br><span class="line"><span class="keyword">var</span> num4=<span class="built_in">Number</span>(<span class="literal">true</span>);<span class="comment">//1</span></span><br><span class="line"><span class="keyword">var</span> num5=<span class="built_in">Number</span>(<span class="string">&#x27;1a&#x27;</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(num5,<span class="keyword">typeof</span> num5);</span><br></pre></td></tr></table></figure>
+
+<p> ②将数据转为整型</p>
+<p>  parseInt()</p>
+<p>  常用于将字符串或数字转为整型，其它的数据返回NaN；如果要转换的字符串以非数字开头，也返回NaN</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//强制转为整型</span></span><br><span class="line"><span class="keyword">var</span> num6=<span class="built_in">parseInt</span>(<span class="string">&#x27;3.5&#x27;</span>);<span class="comment">//3</span></span><br><span class="line"><span class="keyword">var</span> num7=<span class="built_in">parseInt</span>(<span class="string">&#x27;1a&#x27;</span>);<span class="comment">//1</span></span><br><span class="line"><span class="keyword">var</span> num8=<span class="built_in">parseInt</span>(<span class="string">&#x27;a1&#x27;</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">var</span> num9=<span class="built_in">parseInt</span>(<span class="literal">undefined</span>);<span class="comment">//NaN</span></span><br></pre></td></tr></table></figure>
+
+<p> ③将数据转为浮点型</p>
+<p>  parseFloat()</p>
+<p>  和parseInt的用法基本一致，只是转的数据是浮点型。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//转为浮点型</span></span><br><span class="line"><span class="keyword">var</span> num13=<span class="built_in">parseFloat</span>(<span class="string">&#x27;1.5a&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num13,<span class="keyword">typeof</span> num13);<span class="comment">//1.5</span></span><br></pre></td></tr></table></figure>
+
+<p> ④数值型和布尔型转为字符串型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//转为字符串类型</span></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> str=num.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str,<span class="keyword">typeof</span> str);<span class="comment">//&#x27;10&#x27;</span></span><br><span class="line"><span class="keyword">var</span> bool=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> str2=bool.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str2,<span class="keyword">typeof</span> str2);<span class="comment">//&#x27;true&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
     </div>
@@ -315,12 +344,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B0/" rel="prev" title="JavaScripts数据类型笔记">
-      <i class="fa fa-chevron-left"></i> JavaScripts数据类型笔记
+    <a href="/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="JavaScripts运算符笔记">
+      <i class="fa fa-chevron-left"></i> JavaScripts运算符笔记
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B01/" rel="next" title="JavaScripts数据类型笔记">
-      JavaScripts数据类型笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/08/29/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="HTML学习笔记">
+      HTML学习笔记 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -379,7 +408,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">1.运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.1.</span> <span class="nav-text">(1)算术运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.</span> <span class="nav-text">(2)比较运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">(3)逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6-%E4%BA%86%E8%A7%A3"><span class="nav-number">1.4.</span> <span class="nav-text">(4)位运算符(了解)</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">1.数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%95%B0%E5%80%BC%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">(1)数值型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">(2)字符串型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%B8%83%E5%B0%94%E5%9E%8B"><span class="nav-number">1.3.</span> <span class="nav-text">(3)布尔型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%9E%8B"><span class="nav-number">1.4.</span> <span class="nav-text">(4)未定义型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%A9%BA%E2%80%94%E2%80%94null"><span class="nav-number">1.5.</span> <span class="nav-text">(5)空——null</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">2.数据类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.1.</span> <span class="nav-text">(1)隐式转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">(2)强制转换</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
