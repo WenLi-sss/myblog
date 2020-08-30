@@ -10,8 +10,70 @@
       </categories>
   </entry>
   <entry>
+    <title>JavaScripts运算符笔记</title>
+    <url>/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>JavaScripts运算符笔记</title>
+    <url>/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>2020.8.30记</p>
+<p>表达式: 由运算符连接的操作数据，所组成的形式。</p>
+<p>运算符分为算术运算符、比较运算符、逻辑运算符、位运算符、赋值运算符、三目运算符</p>
+<h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="(1)算术运算符"></a>(1)算术运算符</h4><p>  +  -  *  /  % ++  –</p>
+<p>  %  取余</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取余</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>%<span class="number">2</span>);<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>%<span class="number">3</span>);<span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">-2</span>%<span class="number">3</span>);<span class="comment">//-2</span></span><br></pre></td></tr></table></figure>
+
+<p>  ++ 自增，在原来的基础之上加1</p>
+<p>  –  自减，在原来的基础之上减1</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num++); <span class="comment">//先打印num的值1，再执行自增</span></span><br><span class="line"><span class="built_in">console</span>.log(++num); <span class="comment">//先执行自增，再打印num的值2</span></span><br></pre></td></tr></table></figure>
+
+<p>  练习：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num-- + --num); <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="(2)比较运算符"></a>(2)比较运算符</h4><p> &gt;  &lt;  &gt;=  &lt;=  !=  ==  ===(全等于)  !== 全不等于</p>
+<p> 返回一个布尔型的值</p>
+<p> == 只是比较两个值是否相等</p>
+<p> ===  不仅比较值，还会比较类型是否相等</p>
+<p>如果数据类型不同，会发生数据类型转换</p>
+<p> 3&gt;’10’  字符串转成数字10</p>
+<p> ‘3’&gt;’10’  <strong>两个字符串比较的是Unicode码</strong></p>
+<p> 3&gt;’10a’ //false</p>
+<p> 3&lt;’10a’ //false</p>
+<p> 3==’10a’ //false</p>
+<p>   ‘10a’  -&gt; NaN</p>
+<p>  NaN和任何值比较(&gt; &lt; &gt;= &lt;= == ===)都返回false</p>
+<p>  NaN==NaN  返回false</p>
+<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="(3)逻辑运算符"></a>(3)逻辑运算符</h4><p>  或者( || )  关联的两个条件只需要满足其一, 结果是true，否则false</p>
+<p>  并且( &amp;&amp; )  关联的两个条件都是true，结果是true，否则false  </p>
+<p>  非(反向) !   !false -&gt; true  !true -&gt; false</p>
+<p> <strong>逻辑短路</strong></p>
+<p>  &amp;&amp; 当第一个条件为false的时候，就不需要再执行第二个条件</p>
+<p>  ||  当第一个条件为true的时候，就不需要再执行第二个条件</p>
+<p>  注意：逻辑短路无需关注最终结果是true还是false，重点是看是否会执行第二个表达式。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//练习：声明变量保存一个人的年龄，如果满18岁，打印&#x27;成年人&#x27;</span></span><br><span class="line"><span class="keyword">var</span> age=<span class="number">11</span>;</span><br><span class="line">age&gt;=<span class="number">18</span> &amp;&amp; <span class="built_in">console</span>.log(<span class="string">&#x27;成年人&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-位运算符-了解"><a href="#4-位运算符-了解" class="headerlink" title="(4)位运算符(了解)"></a>(4)位运算符(了解)</h4><p>  在执行运算的时候，计算机会把数据转成二进制进行运算。</p>
+<p> 1 1011  100  101  110  111  1000  1001  1010</p>
+<p>  2    4           8</p>
+<p> 按位与( &amp; ) 上下两位都是1，结果是1，否则是0</p>
+<p> 按位或( | ) 上下两位含有1，结果是1，否则是0</p>
+<p> 按位异或( ^ ) 上下两位不同为1，相同为0</p>
+<p> 按位右移( &gt;&gt; ) 删除二进制的最后一位或者多位，每次缩小到原来的一半或者更多。</p>
+<p> 按位左移( &lt;&lt; ) 在二进制的最后添加0，成倍增加</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>&amp;<span class="number">7</span>);<span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">7</span>|<span class="number">9</span>);<span class="comment">//15</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">13</span>|<span class="number">20</span>);<span class="comment">//29</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">4</span>^<span class="number">7</span>);<span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>^<span class="number">8</span>);<span class="comment">//13</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">120</span>&gt;&gt;<span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>&lt;&lt;<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>JavaScripts</category>
+      </categories>
+      <tags>
+        <tag>JavaScripts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScripts数据类型笔记</title>
-    <url>/2020/08/30/Javascripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B0/</url>
+    <url>/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>2020.8.30记</p>
 <a id="more"></a>
 
@@ -78,14 +140,15 @@
 <p> ③将数据转为浮点型</p>
 <p>  parseFloat()</p>
 <p>  和parseInt的用法基本一致，只是转的数据是浮点型。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gghg</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//转为浮点型</span></span><br><span class="line"><span class="keyword">var</span> num13=<span class="built_in">parseFloat</span>(<span class="string">&#x27;1.5a&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num13,<span class="keyword">typeof</span> num13);<span class="comment">//1.5</span></span><br></pre></td></tr></table></figure>
 
 <p> ④数值型和布尔型转为字符串型</p>
-<p>  toString()</p>
-<p>  var num=10;</p>
-<p>  num.toString();  // ‘10’</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//转为字符串类型</span></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> str=num.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str,<span class="keyword">typeof</span> str);<span class="comment">//&#x27;10&#x27;</span></span><br><span class="line"><span class="keyword">var</span> bool=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> str2=bool.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str2,<span class="keyword">typeof</span> str2);<span class="comment">//&#x27;true&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
 ]]></content>
       <categories>
         <category>JavaScripts</category>
