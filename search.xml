@@ -12,7 +12,10 @@
   <entry>
     <title>JavaScripts函数和对象</title>
     <url>/2020/08/30/JavaScripts%E5%87%BD%E6%95%B0%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h3 id="1-函数"><a href="#1-函数" class="headerlink" title="1.函数"></a>1.函数</h3><p> parseInt()/parseFloat()…</p>
+    <content><![CDATA[<p>2020.8.30记</p>
+<a id="more"></a>
+
+<h3 id="1-函数"><a href="#1-函数" class="headerlink" title="1.函数"></a>1.函数</h3><p> parseInt()/parseFloat()…</p>
 <p> 分为系统函数和自定义函数</p>
 <p> 自定义函数</p>
 <p>  function: 功能体,函数，用于封装反复执行的代码，可以接受若干个数据，返回处理的结果。——饺子机</p>
