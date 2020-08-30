@@ -12,7 +12,8 @@
   <entry>
     <title>Javascripts数据类型笔记</title>
     <url>/2020/08/30/Javascripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>2020.8.30记</p>
+<a id="more"></a>
 
 <h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h3><p> 数据分为原始类型和引用类型</p>
 <p> 原始类型分为数值型、字符串型、布尔型、未定义型、空</p>

@@ -287,7 +287,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-08-30 15:15:07 / 修改时间：15:38:52" itemprop="dateCreated datePublished" datetime="2020-08-30T15:15:07+08:00">2020-08-30</time>
+              <time title="创建时间：2020-08-30 15:15:07 / 修改时间：15:40:26" itemprop="dateCreated datePublished" datetime="2020-08-30T15:15:07+08:00">2020-08-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -310,79 +310,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <a id="more"></a>
-
-<h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h3><p> 数据分为原始类型和引用类型</p>
-<p> 原始类型分为数值型、字符串型、布尔型、未定义型、空</p>
-<h4 id="1-数值型"><a href="#1-数值型" class="headerlink" title="(1)数值型"></a>(1)数值型</h4><p> 分为整型和浮点型</p>
-<p> 整型在内存中占4个字节，浮点型占8个字节</p>
-<p> 八进制  以0开头， 例如 013 -&gt; 11</p>
-<p> 十六进制  以0X开头，  例如  0XA -&gt; 10</p>
-<p>  A<del>F 代表10</del>15   不区分大小写</p>
-<p>  0XFF -&gt; 255</p>
-<p> 浮点型分为普通小数和指数型小数</p>
-<p>  3.14E6  -&gt;  31400000</p>
-<p>  3.14E-6  -&gt;  0.00000314</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//十进制</span></span><br><span class="line"><span class="keyword">var</span> num1=<span class="number">12</span>;<span class="comment">//12</span></span><br><span class="line"><span class="comment">//八进制</span></span><br><span class="line"><span class="keyword">var</span> num2=<span class="number">013</span>;<span class="comment">//11</span></span><br><span class="line"><span class="comment">//十六进制</span></span><br><span class="line"><span class="keyword">var</span> num3=<span class="number">0XF</span>;<span class="comment">//15</span></span><br><span class="line"><span class="keyword">var</span> num5=<span class="number">3.14E6</span>;<span class="comment">//3140000  </span></span><br><span class="line"><span class="keyword">var</span> num6=<span class="number">3.14E-6</span>;<span class="comment">//0.00000314 </span></span><br></pre></td></tr></table></figure>
-
-<p>typeof 检测数据类型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num5=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num6);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-字符串型"><a href="#2-字符串型" class="headerlink" title="(2)字符串型"></a>(2)字符串型</h4><p> 数据被引号包含就是字符串类型，不区分单双引号</p>
-<p>  查看任意一个字符的Unicode码</p>
-<p>   ‘a’.charCodeAt()  //97]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="string">&#x27;字&#x27;</span>.charCodeAt() );<span class="comment">//查看自己姓名的Unicode码</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-布尔型"><a href="#3-布尔型" class="headerlink" title="(3)布尔型"></a>(3)布尔型</h4><p> true/false</p>
-<p> 在程序中表示真或者假</p>
-<p> 一般用于是否的结果，例如是否登录，是否注册，是否在售，是否为会员…</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isLogin=<span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> isIndex=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(isLogin,<span class="keyword">typeof</span> isIndex);</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-未定义型"><a href="#4-未定义型" class="headerlink" title="(4)未定义型"></a>(4)未定义型</h4><p> 声明了变量未赋值，结果就是undefined </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age;</span><br><span class="line"><span class="built_in">console</span>.log(age,<span class="keyword">typeof</span> age);</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-空——null"><a href="#5-空——null" class="headerlink" title="(5)空——null"></a>(5)空——null</h4><p> 常和引用类型数据一起使用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=<span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-数据类型转换"><a href="#2-数据类型转换" class="headerlink" title="2.数据类型转换"></a>2.数据类型转换</h3><p> (1)隐式转换</p>
-<p>  ①数字+字符串  数字转换成字符串</p>
-<p>   1+’2’  // ‘12’</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="number">1</span>+<span class="string">&#x27;2&#x27;</span>; </span><br><span class="line"><span class="built_in">console</span>.log(str1,<span class="keyword">typeof</span> str1);<span class="comment">// &#x27;12&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>  ②数字+布尔型  布尔型转成数字 true-&gt;1 false-&gt;0</p>
-<p>   3+true  //4</p>
-<p>   3+false  //3</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">3</span>+<span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num,<span class="keyword">typeof</span> num);</span><br></pre></td></tr></table></figure>
-
-<p>  ③字符串+布尔型 布尔型转成字符串</p>
-<p>   ‘5’+true  //‘5true’</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str3=<span class="string">&#x27;5&#x27;</span>+<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str3,<span class="keyword">typeof</span> str3);<span class="comment">//&#x27;5true&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>  JS中加号(+)的作用</p>
-<p>   执行加法运算</p>
-<p>   执行字符串拼接</p>
-<p>  减法(-)、乘法(*)、除法(/) 隐式换行</p>
-<p>   将运算符两端的数据转为数值型(自动调用Number)，如果转换失败，返回NaN(Not a Number)，不是一个数字，任何值和NaN执行减乘除运算符都会返回NaN</p>
-<p>  练习：查看以下程序的运行结果</p>
-<p>  var num1=3,num2=true,num3=’tedu’;</p>
-<p>  console.log(num1+num2+num3);//‘4tedu’</p>
-<p>  console.log(num2+num3+num1);//‘truetedu3’</p>
-<p>  console.log(num3+num1+num2);//‘tedu3true’</p>
-<p> (2)强制转换</p>
-<p> ①将任意的数据强制转为数值型</p>
-<p>  Number()</p>
-<p>Number(‘a’);  //NaNNumber(‘1’);  //1Number(‘1a’);  //NaNNumber(undefined);  //NaNNumber(null);  //0Number(true);  //1</p>
-<p> ②将数据转为整型</p>
-<p>  parseInt()</p>
-<p>  常用于将字符串或数字转为整型，其它的数据返回NaN；如果要转换的字符串以非数字开头，也返回NaN</p>
-<p> ③将数据转为浮点型</p>
-<p>  parseFloat()</p>
-<p>  和parseInt的用法基本一致，只是转的数据是浮点型。</p>
-<p> ④数值型和布尔型转为字符串型</p>
-<p>  toString()</p>
-<p>  var num=10;</p>
-<p>  num.toString();  // ‘10’</p>
-
+          <p>2020.8.30记</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/30/Javascripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
