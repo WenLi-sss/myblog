@@ -22,8 +22,7 @@
 
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> book=&#123;</span><br><span class="line">  id:<span class="number">1002</span>,</span><br><span class="line">  title:<span class="string">&#x27;javascript高级程序设计&#x27;</span>,</span><br><span class="line">  price:<span class="number">79</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//把book变量中存储的数据赋给book2变量</span></span><br><span class="line"><span class="comment">//把book存储的地址赋给了book2</span></span><br><span class="line"><span class="comment">//现在book和book2指向同一个对象</span></span><br><span class="line"><span class="keyword">var</span> book2=book;</span><br><span class="line"><span class="comment">//使用不同的变量去修改同一个对象</span></span><br><span class="line"><span class="comment">//修改book中属性</span></span><br><span class="line">book.price=<span class="number">86</span>;</span><br><span class="line"><span class="built_in">console</span>.log(book2);<span class="comment">//&#123; id: 1002, title: &#x27;javascript高级程序设计&#x27;, price: 86 &#125;</span></span><br><span class="line"><span class="comment">//修改book2的属性</span></span><br><span class="line">book2.title=<span class="string">&#x27;JavaScript权威指南&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(book);<span class="comment">//&#123; id: 1002, title: &#x27;JavaScript权威指南&#x27;, price: 86 &#125;</span></span><br></pre></td></tr></table></figure>
 
-<img src="F:\lw\WEB\myblog\themes\next\source\images\js\引用类型数据的存储.png" style="zoom: 67%;" />
-
+<p><img src="/images/js/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8.png"></p>
 <p>数组</p>
 <p> 数组是由多个元素组成的集合，每个元素就是一个数据</p>
 <h3 id="2-创建数组"><a href="#2-创建数组" class="headerlink" title="2.创建数组"></a>2.创建数组</h3><h4 id="1-数组字面量"><a href="#1-数组字面量" class="headerlink" title="(1)数组字面量"></a>(1)数组字面量</h4><p> [元素1,元素2…]</p>
