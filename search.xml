@@ -10,6 +10,28 @@
       </categories>
   </entry>
   <entry>
+    <title>JS中this的指向</title>
+    <url>/2020/09/10/JS%E4%B8%ADthis%E7%9A%84%E6%8C%87%E5%90%91/</url>
+    <content><![CDATA[<p>2020.9.10记</p>
+<a id="more"></a>
+
+<p>情况1：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window，这里需要说明的是在js的严格版中this指向的不是window</p>
+<p>情况2：如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。</p>
+<p>情况3：如果一个函数中有this，<strong>这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象</strong></p>
+<p>情况4：new操作符会改变函数this的指向问题</p>
+<p>为什么this会指向a？首先new关键字会创建一个空的对象，然后会自动调用一个函数apply方法，将this指向这个空对象，这样的话函数内部的this就会被这个空的对象替代</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.num = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> fn();</span><br><span class="line"><span class="built_in">console</span>.log(a.num); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/pssp/p/5216085.html">彻底理解this的用法</a></p>
+]]></content>
+      <categories>
+        <category>JavaScripts</category>
+      </categories>
+      <tags>
+        <tag>JavaScripts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScripts数组</title>
     <url>/2020/09/05/JavaScripts%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<p>2020.9.5记</p>
@@ -89,8 +111,6 @@
 <p> shift() 删除数组开头的元素，返回删除的元素</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="string">&#x27;html&#x27;</span>,<span class="string">&#x27;css&#x27;</span>,<span class="string">&#x27;js&#x27;</span>];</span><br><span class="line"><span class="comment">//作用</span></span><br><span class="line"><span class="comment">//参数</span></span><br><span class="line"><span class="comment">//返回值</span></span><br><span class="line"><span class="comment">//在数组末尾添加元素</span></span><br><span class="line"><span class="built_in">console</span>.log( arr.push(<span class="string">&#x27;nodejs&#x27;</span>) );<span class="comment">//4</span></span><br><span class="line"><span class="comment">//删除数组末尾的元素</span></span><br><span class="line"><span class="built_in">console</span>.log( arr.pop() );<span class="comment">//js</span></span><br><span class="line"><span class="comment">//在数组开头添加元素 </span></span><br><span class="line"><span class="built_in">console</span>.log( arr.unshift(<span class="string">&#x27;ajax&#x27;</span>) );<span class="comment">//4</span></span><br><span class="line"><span class="comment">//在数组开头删除元素</span></span><br><span class="line"><span class="built_in">console</span>.log( arr.shift() );<span class="comment">//ajax</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[ &#x27;html&#x27;, &#x27;css&#x27;, &#x27;js&#x27; ]</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h3 id="5-二维数组"><a href="#5-二维数组" class="headerlink" title="5.二维数组"></a>5.二维数组</h3><p> 数组中的每个元素也是数组</p>
 <p> var arr=[ [], [], [] .. ]</p>
 <p> 访问二维数组中的元素  arr[] []</p>
@@ -100,17 +120,24 @@
 <p> JS提供了3种包装对象：String  Number  Boolean</p>
 <p> 将任意数据转为字符串</p>
 <p>  new String()  返回对象，使用和字符没有区别</p>
-<p>  String()  返回字符串</p>
+<p>  String()  返回字符串   //将任意数据转为字符串</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="comment">//将数据转成字符串，并返回对象</span></span><br><span class="line"><span class="keyword">var</span> str2=<span class="keyword">new</span> <span class="built_in">String</span>(<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str2,<span class="keyword">typeof</span> str2);<span class="comment">//[String: &#x27;1&#x27;] object</span></span><br><span class="line"><span class="built_in">console</span>.log(str2+<span class="number">2</span>);<span class="comment">//12</span></span><br><span class="line"><span class="comment">//将数组转为字符串，返回字符串</span></span><br><span class="line"><span class="comment">//toString()</span></span><br><span class="line"><span class="keyword">var</span> str3=<span class="built_in">String</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="built_in">console</span>.log(str3,<span class="keyword">typeof</span> str3);<span class="comment">//true string</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="1-转义字符-——"><a href="#1-转义字符-——" class="headerlink" title="(1)转义字符 —— \"></a>(1)转义字符 —— \</h4><p>  转换字符的意义</p>
 <p>  用法：在要转义的字符前加 \</p>
 <p>  &#39;  将引号转义成普通的字符</p>
 <p>  \n  将字符n转义成换行符</p>
 <p>  \t  将字符t转义成制表符(tab键效果)</p>
-<p>  …</p>
-<p> 练习：打印出现 welcome to chi\na</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;It\&#x27;s a dog&#x27;</span>);<span class="comment">//It&#x27;s a dog</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;hello \nworld&#x27;</span>);</span><br><span class="line"><span class="comment">//hello </span></span><br><span class="line"><span class="comment">//world</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;a\tb&#x27;</span>);<span class="comment">//a	b</span></span><br><span class="line"><span class="comment">//打印出现 welcome to chi\na</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;welcome to chi\\na&#x27;</span>);<span class="comment">//welcome to chi\na</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="2-字符串API"><a href="#2-字符串API" class="headerlink" title="(2)字符串API"></a>(2)字符串API</h4><p> length  获取字符串的长度</p>
 <p> charAt()  获取下标对应的字符，也可以使用数组形式 字符串[下标]</p>
-<p> 练习：遍历字符串，打印出每一个字符（循环下标）。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;javascript&#x27;</span>;</span><br><span class="line"><span class="comment">//计算字符串的长度</span></span><br><span class="line"><span class="built_in">console</span>.log( str.length );<span class="comment">//10</span></span><br><span class="line"><span class="comment">//获取下标对应的字符</span></span><br><span class="line"><span class="built_in">console</span>.log( str[<span class="number">2</span>] );<span class="comment">//v</span></span><br><span class="line"><span class="built_in">console</span>.log( str.charAt(<span class="number">4</span>) );<span class="comment">//s</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//遍历字符串，打印出每一个字符（循环下标）</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;javascript&#x27;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;str.length;i++)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(str[i],str.charAt(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>JavaScripts</category>
