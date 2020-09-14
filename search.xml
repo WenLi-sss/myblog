@@ -10,6 +10,55 @@
       </categories>
   </entry>
   <entry>
+    <title>CSS基础（FreeCodeCamp）</title>
+    <url>/2020/09/14/CSS%E5%9F%BA%E7%A1%80%EF%BC%88FreeCodeCamp%EF%BC%89/</url>
+    <content><![CDATA[<p>2020.9.14记</p>
+<a id="more"></a>
+
+<p>1、更改文本的颜色</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//改变h2元素为蓝色</span><br><span class="line">&lt;h2 style=&quot;color:blue;&quot;&gt;catphotoapp&lt;/h2&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、使用元素选择器来设置元素的样式</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//创建一个style声明区域，在该区域内，创建一个元素选择器</span><br><span class="line">//使所有h2元素变成红色</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">  <span class="selector-tag">h2</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、使用class选择器设置单个元素的样式</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//在&lt;style&gt;样式声明区域里，创建一个名为blue-text的class选择器</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.blue-text</span>&#123;</span><br><span class="line"><span class="attribute">color</span>:blue;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4、使用class选择器设置多个元素的样式</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//将red-text class选择器应用在第一个p元素上</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.red-text</span>&#123;</span><br><span class="line"><span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;p class=&quot;red-text&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>5、更改元素的字体大小</p>
+<p>字体大小由font-size属性控制</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//在包含red-text class选择器的&lt;style&gt;声明区域的里面创建一个p元素样式规则，并设置font-size为16px</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.red-text</span>&#123;</span><br><span class="line"><span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line"><span class="attribute">font-szie</span>:<span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>6、设置元素的字体家族</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//如果你想设置h2元素的字体为sans-serif，你可以使用以下的CSS规则</span><br><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line"><span class="attribute">font-family</span>:sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>7、引入谷歌字体</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//将链接放到style标签之前</span><br><span class="line">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Lobster&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>8、字体如何优雅降级</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//Helvetica不可用时，降级使用sans-serif字体</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line"><span class="attribute">font-family</span>:Helvetica，sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>9、调整图片的大小</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">//创建一个larger-image的CSS class来控制HTML元素的宽度为500px</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.larger-image</span>&#123;</span><br><span class="line"><span class="attribute">width</span>:<span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>10、在元素周围添加边框</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.thin-red-border</span>&#123;</span><br><span class="line"><span class="attribute">border-color</span>:red;</span><br><span class="line"><span class="attribute">border-width</span>:<span class="number">5px</span>;</span><br><span class="line"><span class="attribute">border-style</span>:solid;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>在一个元素上可以应用多个class，通过使用空格来分隔</strong></p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;img class=&quot;class1 class2&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>11、</p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS中this的指向</title>
     <url>/2020/09/10/JS%E4%B8%ADthis%E7%9A%84%E6%8C%87%E5%90%91/</url>
     <content><![CDATA[<p>2020.9.10记</p>
@@ -247,8 +296,8 @@
 
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line"><span class="comment">//a和b都是匿名函数的名称</span></span><br><span class="line"><span class="keyword">var</span> num1=a();</span><br><span class="line"><span class="keyword">var</span> num2=a();</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">4</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-全局函数"><a href="#6-全局函数" class="headerlink" title="6.全局函数"></a>6.全局函数</h3><p> parseInt()  将数据转为整型</p>
-<p> parseFloat()  将数据转为浮点型</p>
+<h3 id="6-全局函数"><a href="#6-全局函数" class="headerlink" title="6.全局函数"></a>6.全局函数</h3><p> parseInt(string,radix)  将数据转为整型</p>
+<p> parseFloat(string)  将数据转为浮点型</p>
 <p> encodeURI()  对一个URL中的中文进行编码</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> url=<span class="string">&#x27;http://www.codeboy.com/search?keyword=电脑&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> str=<span class="built_in">encodeURI</span>(url);</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
 
