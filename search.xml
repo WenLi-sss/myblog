@@ -44,7 +44,7 @@
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">//创建一个larger-image的CSS class来控制HTML元素的宽度为500px</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.larger-image</span>&#123;</span><br><span class="line"><span class="attribute">width</span>:<span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
 <p>10、在元素周围添加边框</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.thin-red-border</span>&#123;</span><br><span class="line"><span class="attribute">border-color</span>:red;</span><br><span class="line"><span class="attribute">border-width</span>:<span class="number">5px</span>;</span><br><span class="line"><span class="attribute">border-style</span>:solid;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.thin-red-border</span>&#123;</span><br><span class="line"><span class="attribute">border-color</span>:red;</span><br><span class="line"><span class="attribute">border-width</span>:<span class="number">5px</span>;</span><br><span class="line"><span class="attribute">border-style</span>:solid;</span><br><span class="line"><span class="attribute">border-radius</span>:<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p><strong>在一个元素上可以应用多个class，通过使用空格来分隔</strong></p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;img class=&quot;class1 class2&quot;&gt;</span><br></pre></td></tr></table></figure>
@@ -183,10 +183,50 @@
 <p> charAt()  获取下标对应的字符，也可以使用数组形式 字符串[下标]</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;javascript&#x27;</span>;</span><br><span class="line"><span class="comment">//计算字符串的长度</span></span><br><span class="line"><span class="built_in">console</span>.log( str.length );<span class="comment">//10</span></span><br><span class="line"><span class="comment">//获取下标对应的字符</span></span><br><span class="line"><span class="built_in">console</span>.log( str[<span class="number">2</span>] );<span class="comment">//v</span></span><br><span class="line"><span class="built_in">console</span>.log( str.charAt(<span class="number">4</span>) );<span class="comment">//s</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//遍历字符串，打印出每一个字符（循环下标）</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;javascript&#x27;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;str.length;i++)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(str[i],str.charAt(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//遍历字符串，打印出每一个字符（循环下标）</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">&#x27;javascript&#x27;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;str.length;i++)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(str[i],str.charAt(i));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">j j</span></span><br><span class="line"><span class="comment">a a</span></span><br><span class="line"><span class="comment">v v</span></span><br><span class="line"><span class="comment">a a</span></span><br><span class="line"><span class="comment">s s</span></span><br><span class="line"><span class="comment">c c</span></span><br><span class="line"><span class="comment">r r</span></span><br><span class="line"><span class="comment">i i</span></span><br><span class="line"><span class="comment">p p</span></span><br><span class="line"><span class="comment">t t</span></span><br><span class="line"><span class="comment">s s*/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> charCodeAt()  获取某个字符的Unicode码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;a&#x27;</span>.charCodeAt());<span class="comment">//97</span></span><br></pre></td></tr></table></figure>
 
 
 
+<p> indexOf(value, start) 查找某个字符串的下标，value要查找的字符串，start开始的下标，默认是0，如果找不到返回-1</p>
+<p> lastIndexOf(value)  查找某个字符串最后一次出现的下标，找不到返回-1</p>
+<p> 练习：声明变量保存字符串，检测该字符串中是否含有@，如果有打印“合法的邮箱“，否则打印“不合法邮箱”。</p>
+<p> toUpperCase()  将英文字母转为大写</p>
+<p> toLowerCase()  将英文字母转为小写</p>
+<p> 练习：声明变量保存4个英文字母，无限循环弹出提示框，输入验证码(不区分大小写)，如果输入正确结束循环。</p>
+<p> 06_code.js  06_code.html</p>
+<p> slice(start, end)  截取字符串，start开始的下标，end结束的下标，不包含end本身；如果为负数表示倒数；end为空截取到最后。</p>
+<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#116;&#111;&#109;&#49;&#50;&#51;&#x34;&#x35;&#x36;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#116;&#111;&#109;&#49;&#50;&#51;&#x34;&#x35;&#x36;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p> substr(start, count)  截取字符串，start开始的下标，count截取的长度，如果count为空截取到最后，start为负数表示倒数</p>
+<p> 练习：声明变量保存身份证号，截取出年月日和性别；打印“1998年06月20日 性别女”</p>
+<p>  110236199806202589</p>
+<p> substring(start,end)  截取字符串，start开始的下标，end结束的下标，如果end为空截取到最后；如果下标为负数，自动转成0。</p>
+<p> 对比slice和substring</p>
+<p> slice中下标允许使用负数，substring会自动将负数转为0；slice中下标的顺序start小于end，substring中下标大小不分顺序</p>
+<p> 练习：将一个英文单词的首字母转大写，其余的字母转小写  heLLo  -&gt;  Hello</p>
+<p> split(sep) 将字符串按照指定字符分隔成数组，sep是指定的字符</p>
+<p> 练习：使用split分隔邮箱，获取用户名和域名</p>
+<p>4.匹配模式(掌握)</p>
+<p> 作用：用于查找、替换字符串</p>
+<p> match(value)  用于查找匹配的字符串，返回所有满足条件的元素，组成数组 /china/ig </p>
+<p> i  -&gt; ignore  忽略大小写</p>
+<p> g -&gt; global  全局查找</p>
+<p> search(value) 用于查找满足条件的第一个字符串的下标，如果找不到返回-1</p>
+<p> replace(value1,value2) 查找并替换，value1要查找的字符串，value2要替换的字符串</p>
+<p>5.Math对象</p>
+<p> 不需要使用new创建，可以直接使用</p>
+<p> PI  取圆周率</p>
+<p> abs()  取绝对值</p>
+<p> floor()  向下取整</p>
+<p> ceil()  向上取整</p>
+<p> round()  四舍五入取整</p>
+<p> max()  取一组数字的最大值</p>
+<p> min()  取一组数字的最小值</p>
+<p> pow()  求x的y次幂</p>
+<p> random()  取随机数  &gt;=0  &lt;1</p>
+<p> 练习：随机产生0~9之间的一个整数。</p>
 ]]></content>
       <categories>
         <category>JavaScripts</category>
