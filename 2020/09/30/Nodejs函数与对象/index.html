@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2020.8.30记">
+  <meta name="description" content="2020.9.30记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScripts数据类型">
-<meta property="og:url" content="http://yoursite.com/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:title" content="Nodejs函数与对象">
+<meta property="og:url" content="http://yoursite.com/2020/09/30/Nodejs%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="李文のBLOG">
-<meta property="og:description" content="2020.8.30记">
+<meta property="og:description" content="2020.9.30记">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-30T07:15:07.000Z">
-<meta property="article:modified_time" content="2020-08-30T09:46:31.290Z">
+<meta property="article:published_time" content="2020-09-30T09:48:12.000Z">
+<meta property="article:modified_time" content="2020-09-30T10:04:31.043Z">
 <meta property="article:author" content="李文">
-<meta property="article:tag" content="JavaScripts">
+<meta property="article:tag" content="Nodejs">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+<link rel="canonical" href="http://yoursite.com/2020/09/30/Nodejs%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>JavaScripts数据类型 | 李文のBLOG</title>
+  <title>Nodejs函数与对象 | 李文のBLOG</title>
   
 
 
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/30/JavaScripts%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/30/Nodejs%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JavaScripts数据类型
+          Nodejs函数与对象
         </h1>
 
         <div class="post-meta">
@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-08-30 15:15:07 / 修改时间：17:46:31" itemprop="dateCreated datePublished" datetime="2020-08-30T15:15:07+08:00">2020-08-30</time>
+              <time title="创建时间：2020-09-30 17:48:12 / 修改时间：18:04:31" itemprop="dateCreated datePublished" datetime="2020-09-30T17:48:12+08:00">2020-09-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -229,7 +229,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScripts/" itemprop="url" rel="index"><span itemprop="name">JavaScripts</span></a>
+                  <a href="/categories/Nodejs/" itemprop="url" rel="index"><span itemprop="name">Nodejs</span></a>
                 </span>
             </span>
 
@@ -251,81 +251,90 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>2020.8.30记</p>
+        <p>2020.9.30记</p>
 <a id="more"></a>
 
-<h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h3><p> 数据分为原始类型和引用类型</p>
-<p> 原始类型分为数值型、字符串型、布尔型、未定义型、空</p>
-<h4 id="1-数值型"><a href="#1-数值型" class="headerlink" title="(1)数值型"></a>(1)数值型</h4><p> 分为整型和浮点型</p>
-<p> 整型在内存中占4个字节，浮点型占8个字节</p>
-<p> 八进制  以0开头， 例如 013 -&gt; 11</p>
-<p> 十六进制  以0X开头，  例如  0XA -&gt; 10</p>
-<p>  A F 代表10 15   不区分大小写</p>
-<p>  0XFF -&gt; 255</p>
-<p> 浮点型分为普通小数和指数型小数</p>
-<p>  3.14E6  -&gt;  31400000</p>
-<p>  3.14E-6  -&gt;  0.00000314</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//十进制</span></span><br><span class="line"><span class="keyword">var</span> num1=<span class="number">12</span>;<span class="comment">//12</span></span><br><span class="line"><span class="comment">//八进制</span></span><br><span class="line"><span class="keyword">var</span> num2=<span class="number">013</span>;<span class="comment">//11</span></span><br><span class="line"><span class="comment">//十六进制</span></span><br><span class="line"><span class="keyword">var</span> num3=<span class="number">0XF</span>;<span class="comment">//15</span></span><br><span class="line"><span class="keyword">var</span> num5=<span class="number">3.14E6</span>;<span class="comment">//3140000  </span></span><br><span class="line"><span class="keyword">var</span> num6=<span class="number">3.14E-6</span>;<span class="comment">//0.00000314 </span></span><br></pre></td></tr></table></figure>
+<h3 id="1-ES6"><a href="#1-ES6" class="headerlink" title="1.ES6"></a>1.ES6</h3><h4 id="1-函数中的参数"><a href="#1-函数中的参数" class="headerlink" title="(1)函数中的参数"></a>(1)函数中的参数</h4><p> ES6允许为参数设置默认值，如果没有传递实参，自动调用形参的默认值</p>
+<h4 id="2-模板字符串"><a href="#2-模板字符串" class="headerlink" title="(2)模板字符串"></a>(2)模板字符串</h4><p>  一组字符串，可以直接写JS  <code>$&#123;js表达式&#125;</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个对象，保存一个员工的对象(姓名，性别0/1，生日，工资)；使用模板字符串打印员工的信息，性别0显示女，1显示男</span></span><br><span class="line"><span class="keyword">var</span> emp=&#123;</span><br><span class="line">  ename:<span class="string">&#x27;tom&#x27;</span>,</span><br><span class="line">  sex:<span class="number">1</span>,</span><br><span class="line">  birthday:<span class="string">&#x27;1997-9-20&#x27;</span>,</span><br><span class="line">  salary:<span class="number">8000</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`</span></span><br><span class="line"><span class="string">  姓名：<span class="subst">$&#123;emp.ename&#125;</span></span></span><br><span class="line"><span class="string">  性别：<span class="subst">$&#123;emp.sex==<span class="number">0</span> ? <span class="string">&#x27;女&#x27;</span> : <span class="string">&#x27;男&#x27;</span>&#125;</span></span></span><br><span class="line"><span class="string">  生日：<span class="subst">$&#123;emp.birthday&#125;</span></span></span><br><span class="line"><span class="string">  工资：<span class="subst">$&#123;emp.salary&#125;</span></span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"><span class="comment">// 姓名：tom</span></span><br><span class="line"><span class="comment">//性别：男</span></span><br><span class="line"><span class="comment">//生日：1997-9-20</span></span><br><span class="line"><span class="comment">//工资：8000</span></span><br></pre></td></tr></table></figure>
 
-<p>typeof 检测数据类型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num5=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> num6);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-字符串型"><a href="#2-字符串型" class="headerlink" title="(2)字符串型"></a>(2)字符串型</h4><p> 数据被引号包含就是字符串类型，不区分单双引号</p>
-<p>  查看任意一个字符的Unicode码</p>
-<p>   ‘a’.charCodeAt()  //97]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="string">&#x27;字&#x27;</span>.charCodeAt() );<span class="comment">//查看自己姓名的Unicode码</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-布尔型"><a href="#3-布尔型" class="headerlink" title="(3)布尔型"></a>(3)布尔型</h4><p> true/false</p>
-<p> 在程序中表示真或者假</p>
-<p> 一般用于是否的结果，例如是否登录，是否注册，是否在售，是否为会员…</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isLogin=<span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> isIndex=<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(isLogin,<span class="keyword">typeof</span> isIndex);</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-未定义型"><a href="#4-未定义型" class="headerlink" title="(4)未定义型"></a>(4)未定义型</h4><p> 声明了变量未赋值，结果就是undefined </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age;</span><br><span class="line"><span class="built_in">console</span>.log(age,<span class="keyword">typeof</span> age);</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-空——null"><a href="#5-空——null" class="headerlink" title="(5)空——null"></a>(5)空——null</h4><p> 常和引用类型数据一起使用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person=<span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-数据类型转换"><a href="#2-数据类型转换" class="headerlink" title="2.数据类型转换"></a>2.数据类型转换</h3><h4 id="1-隐式转换"><a href="#1-隐式转换" class="headerlink" title="(1)隐式转换"></a>(1)隐式转换</h4><p>  ①数字+字符串  数字转换成字符串</p>
-<p>   1+’2’  // ‘12’</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="number">1</span>+<span class="string">&#x27;2&#x27;</span>; </span><br><span class="line"><span class="built_in">console</span>.log(str1,<span class="keyword">typeof</span> str1);<span class="comment">// &#x27;12&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>  ②数字+布尔型  布尔型转成数字 true-&gt;1 false-&gt;0</p>
-<p>   3+true  //4</p>
-<p>   3+false  //3</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">3</span>+<span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num,<span class="keyword">typeof</span> num);</span><br></pre></td></tr></table></figure>
-
-<p>  ③字符串+布尔型 布尔型转成字符串</p>
-<p>   ‘5’+true  //‘5true’</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str3=<span class="string">&#x27;5&#x27;</span>+<span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str3,<span class="keyword">typeof</span> str3);<span class="comment">//&#x27;5true&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>  JS中加号(+)的作用</p>
-<p>   执行加法运算</p>
-<p>   执行字符串拼接</p>
-<p>  减法(-)、乘法(*)、除法(/) 隐式换行</p>
-<p>   将运算符两端的数据转为数值型(自动调用Number)，如果转换失败，返回NaN(Not a Number)，不是一个数字，任何值和NaN执行减乘除运算符都会返回NaN</p>
-<h4 id="2-强制转换"><a href="#2-强制转换" class="headerlink" title="(2)强制转换"></a>(2)强制转换</h4><p> ①将任意的数据强制转为数值型</p>
-<p>  Number()</p>
-<p>Number(‘a’);  //NaNNumber(‘1’);  //1Number(‘1a’);  //NaNNumber(undefined);  //NaNNumber(null);  //0Number(true);  //1</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将任意的数据强制转为数值型</span></span><br><span class="line"><span class="keyword">var</span> num1=<span class="built_in">Number</span>(<span class="string">&#x27;a&#x27;</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">var</span> num2=<span class="built_in">Number</span>(<span class="literal">undefined</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">var</span> num3=<span class="built_in">Number</span>(<span class="literal">null</span>);<span class="comment">//0</span></span><br><span class="line"><span class="keyword">var</span> num4=<span class="built_in">Number</span>(<span class="literal">true</span>);<span class="comment">//1</span></span><br><span class="line"><span class="keyword">var</span> num5=<span class="built_in">Number</span>(<span class="string">&#x27;1a&#x27;</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(num5,<span class="keyword">typeof</span> num5);</span><br></pre></td></tr></table></figure>
-
-<p> ②将数据转为整型</p>
-<p>  parseInt()</p>
-<p>  常用于将字符串或数字转为整型，其它的数据返回NaN；如果要转换的字符串以非数字开头，也返回NaN</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//强制转为整型</span></span><br><span class="line"><span class="keyword">var</span> num6=<span class="built_in">parseInt</span>(<span class="string">&#x27;3.5&#x27;</span>);<span class="comment">//3</span></span><br><span class="line"><span class="keyword">var</span> num7=<span class="built_in">parseInt</span>(<span class="string">&#x27;1a&#x27;</span>);<span class="comment">//1</span></span><br><span class="line"><span class="keyword">var</span> num8=<span class="built_in">parseInt</span>(<span class="string">&#x27;a1&#x27;</span>);<span class="comment">//NaN</span></span><br><span class="line"><span class="keyword">var</span> num9=<span class="built_in">parseInt</span>(<span class="literal">undefined</span>);<span class="comment">//NaN</span></span><br></pre></td></tr></table></figure>
-
-<p> ③将数据转为浮点型</p>
-<p>  parseFloat()</p>
-<p>  和parseInt的用法基本一致，只是转的数据是浮点型。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//转为浮点型</span></span><br><span class="line"><span class="keyword">var</span> num13=<span class="built_in">parseFloat</span>(<span class="string">&#x27;1.5a&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(num13,<span class="keyword">typeof</span> num13);<span class="comment">//1.5</span></span><br></pre></td></tr></table></figure>
-
-<p> ④数值型和布尔型转为字符串型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//转为字符串类型</span></span><br><span class="line"><span class="keyword">var</span> num=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> str=num.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str,<span class="keyword">typeof</span> str);<span class="comment">//&#x27;10&#x27;</span></span><br><span class="line"><span class="keyword">var</span> bool=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> str2=bool.toString();</span><br><span class="line"><span class="built_in">console</span>.log(str2,<span class="keyword">typeof</span> str2);<span class="comment">//&#x27;true&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-nodejs概述"><a href="#2-nodejs概述" class="headerlink" title="2.nodejs概述"></a>2.nodejs概述</h3><p> nodejs基于谷歌V8引擎，运行在服务器端的语言，基于JS</p>
+<p> 对比JS和nodejs</p>
+<p> (1)JS运行在客户端浏览器，存在多个浏览器，容易产生兼容性的问题；nodejs在服务器端只有一个环境，不存在兼容性。</p>
+<p> (2)两者都有内置(ES)对象、自定义对象、宿主对象(根据执行环境的不同划分)</p>
+<p> (3)JS用于网页中的交互效果，nodejs用于服务器的操作，例如web服务器创建，数据库操作，文件操作等</p>
+<p>  nodejs.org  英文官网</p>
+<p>  nodejs.cn  中文网</p>
+<p> nodejs的特点</p>
+<p>  单线程逻辑处理</p>
+<p>  非阻塞的异步I/O处理</p>
+<p>  支持数万个并发连接</p>
+<p> nodejs的应用场景</p>
+<p>  基于社交网络的大规模web应用 </p>
+<p> nodejs不适合CPU密集型的应用</p>
+<p>  递归、数据加密解密、数据挖掘和数据分析</p>
+<p> nodejs的执行方式</p>
+<p>  脚本模式  node  c:/xampp/…/1.js</p>
+<p>  交互模式  </p>
+<p>   node  回车  进入交互模式</p>
+<p>   两次ctrl+c  或者  .exit   退出交互模式</p>
+<h3 id="3-全局对象"><a href="#3-全局对象" class="headerlink" title="3.全局对象"></a>3.全局对象</h3><p> 全局作用域下的变量就是全局对象下的属性，全局对象下的函数就是全局对象下的方法，可以使用全局对象来访问</p>
+<p> nodejs: global</p>
+<p> 在交互模式下，声明的变量和创建的函数都属于全局下的，可以使用global来访问；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//局部的</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用global来访问a和fn</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">global</span>.a);</span><br><span class="line"><span class="built_in">global</span>.fn();</span><br></pre></td></tr></table></figure>
 
 
 
+<p> 在脚本模式下，声明的变量和创建的函数都不属于全局下的，一个文件默认会创建一个独立的作用域，叫做文件（模块）作用域，防止污染全局。</p>
+<p> js: window</p>
+<p> 在浏览器下，文件中声明的变量或者创建的函数都属于是全局作用域下的，会污染全局。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用全局对象来访问</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a);</span><br><span class="line"><span class="built_in">window</span>.fn();</span><br></pre></td></tr></table></figure>
 
 
+
+<h4 id="1-console对象——控制台"><a href="#1-console对象——控制台" class="headerlink" title="(1)console对象——控制台"></a>(1)console对象——控制台</h4><p>  global.console.log()  打印日志</p>
+<p>  global.console.info() 打印消息</p>
+<p>  global.console.warn()  打印自定义的警告</p>
+<p>  global.console.error()  打印自定义的错误</p>
+<p>  global.console.time(‘自定义字符串’)  开始计时</p>
+<p>  global.console.timeEnd(‘自定义字符串’)  结束计时</p>
+<p>  自定义字符串前后保持一致</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//检测程序的耗时</span></span><br><span class="line"><span class="comment">//计时查看for、while、dowhile循环10000的耗时</span></span><br><span class="line"><span class="built_in">global</span>.console.time(<span class="string">&#x27;for&#x27;</span>);<span class="comment">//开始计时</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;=<span class="number">10000</span>;i++)&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">global</span>.console.timeEnd(<span class="string">&#x27;for&#x27;</span>);<span class="comment">//结束计时</span></span><br><span class="line"><span class="comment">//for: 1.296ms</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">global</span>.console.time(<span class="string">&#x27;while&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i&lt;=<span class="number">10000</span>)&#123;</span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">global</span>.console.timeEnd(<span class="string">&#x27;while&#x27;</span>);</span><br><span class="line"><span class="comment">//while: 0.186ms</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">global</span>.console.time(<span class="string">&#x27;dowhile&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">  i++;</span><br><span class="line">&#125;<span class="keyword">while</span>(i&lt;=<span class="number">10000</span>);</span><br><span class="line"><span class="built_in">global</span>.console.timeEnd(<span class="string">&#x27;dowhile&#x27;</span>);</span><br><span class="line"><span class="comment">//dowhile: 0.225ms</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-process对象——进程"><a href="#2-process对象——进程" class="headerlink" title="(2)process对象——进程"></a>(2)process对象——进程</h4><p> process.arch  查看当前CPU的架构</p>
+<p> process.platform  查看当前的操作系统</p>
+<p> process.env  查看当前系统的环境变量</p>
+<p> process.version  查看当前nodejs的版本号</p>
+<p> process.pid  查看当前的进程编号</p>
+<p> process.kill()  结束某个编号的进程</p>
+<p> (3)Buffer对象——缓冲区</p>
+<p> 一块用于临时存储数据的内存区域，可以存储文件数据、网络上传输的资源(视频、在线直播…)</p>
+<p> 创建Buffer</p>
+<p>   var buf=Buffer.alloc(5, ‘abcde’)</p>
+<p>   buffer数据 &lt;Buffer 61 62 63 64 65&gt;</p>
+<p> 将buffer数据转为字符串</p>
+<p>   buf.toString()</p>
+<p>4.模块</p>
+<p> 模块就是一个封装好的功能体</p>
+<p> 在nodejs下模块分为自定义模块、核心模块(官方提供)、第三方模块</p>
+<p> (1)自定义模块</p>
+<p>  在nodejs下，任意一个js文件都是一块模块，文件中的代码默认被一个构造函数所包含</p>
+<table>
+<thead>
+<tr>
+<th>(function(exports,require,module,__filename,__dirname){ //程序员编写的代码})</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>__filename  当前模块的完整路径和文件名称__dirname  当前模块的完整路径require() 引入一个模块module  指代当前的模块对象module.exports  当前模块导出的对象，包含供其它模块使用的属性和方法exports 等价于module.exports</td>
+</tr>
+</tbody></table>
+<p> 练习：在07_2.js声明变量b，创建函数fn，导出变量和函数。</p>
+<p>课后任务</p>
+<p> (1)复习今天内容，整理思维导图</p>
+<p> (2)练习</p>
+<p>  创建两个模块main.js（主模块），circle.js(功能模块)，在功能模块中创建两个函数，传递1个参数半径，计算圆的周长和面积，导出这两个函数；在主模块中引入功能模块，并调用两个方法</p>
+<p> (3)预习核心模块下的querystring，url，fs</p>
 
     </div>
 
@@ -335,7 +344,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/JavaScripts/" rel="tag"># JavaScripts</a>
+              <a href="/tags/Nodejs/" rel="tag"># Nodejs</a>
           </div>
 
         
@@ -343,13 +352,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/08/30/JavaScripts%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="prev" title="JavaScripts运算符">
-      <i class="fa fa-chevron-left"></i> JavaScripts运算符
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/08/29/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="HTML学习笔记">
-      HTML学习笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/09/14/CSS%E5%9F%BA%E7%A1%80%EF%BC%88FreeCodeCamp%EF%BC%89/" rel="next" title="CSS基础（FreeCodeCamp）">
+      CSS基础（FreeCodeCamp） <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -408,7 +414,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">1.数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%95%B0%E5%80%BC%E5%9E%8B"><span class="nav-text">(1)数值型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="nav-text">(2)字符串型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%B8%83%E5%B0%94%E5%9E%8B"><span class="nav-text">(3)布尔型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%9C%AA%E5%AE%9A%E4%B9%89%E5%9E%8B"><span class="nav-text">(4)未定义型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%A9%BA%E2%80%94%E2%80%94null"><span class="nav-text">(5)空——null</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-text">2.数据类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-text">(1)隐式转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-text">(2)强制转换</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ES6"><span class="nav-text">1.ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-text">(1)函数中的参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">(2)模板字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-nodejs%E6%A6%82%E8%BF%B0"><span class="nav-text">2.nodejs概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1"><span class="nav-text">3.全局对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-console%E5%AF%B9%E8%B1%A1%E2%80%94%E2%80%94%E6%8E%A7%E5%88%B6%E5%8F%B0"><span class="nav-text">(1)console对象——控制台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-process%E5%AF%B9%E8%B1%A1%E2%80%94%E2%80%94%E8%BF%9B%E7%A8%8B"><span class="nav-text">(2)process对象——进程</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
