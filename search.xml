@@ -300,7 +300,7 @@
 <p> 练习：声明变量保存4个英文字母，无限循环弹出提示框，输入验证码(不区分大小写)，如果输入正确结束循环。</p>
 <p> 06_code.js  06_code.html</p>
 <p> slice(start, end)  截取字符串，start开始的下标，end结束的下标，不包含end本身；如果为负数表示倒数；end为空截取到最后。</p>
-<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#116;&#x6f;&#x6d;&#x31;&#x32;&#x33;&#52;&#x35;&#54;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;">&#116;&#x6f;&#x6d;&#x31;&#x32;&#x33;&#52;&#x35;&#54;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#116;&#111;&#x6d;&#49;&#50;&#x33;&#52;&#53;&#x36;&#64;&#x31;&#54;&#51;&#46;&#99;&#111;&#109;">&#116;&#111;&#x6d;&#49;&#50;&#x33;&#52;&#53;&#x36;&#64;&#x31;&#54;&#51;&#46;&#99;&#111;&#109;</a></p>
 <p> substr(start, count)  截取字符串，start开始的下标，count截取的长度，如果count为空截取到最后，start为负数表示倒数</p>
 <p> 练习：声明变量保存身份证号，截取出年月日和性别；打印“1998年06月20日 性别女”</p>
 <p>  110236199806202589</p>
@@ -726,8 +726,50 @@
 <p>safari、chrome、firefox、opera、ie</p>
 <p>(3)浏览器端的技术</p>
 <p>html5、css3、javascript</p>
-<p>3、html的特点</p>
-<p><img src="/images/html/html%E7%9A%84%E7%89%B9%E7%82%B9.png"></p>
+<h3 id="4-html的特点"><a href="#4-html的特点" class="headerlink" title="4.html的特点"></a>4.html的特点</h3><p><img src="/images/html/html%E7%9A%84%E7%89%B9%E7%82%B9.png"></p>
+<p>(1)以.html或者.htm为后缀</p>
+<p>(2)由浏览器解析执行</p>
+<p>(3)用&lt;&gt;来定义标记</p>
+<p>(4)可以嵌套js脚本</p>
+<h3 id="5-html语法"><a href="#5-html语法" class="headerlink" title="5.html语法"></a>5.html语法</h3><p>标记：分为两类</p>
+<p>(1).双标记（封闭类型标记）</p>
+<p>&lt;关键字&gt;&lt;/关键字&gt;</p>
+<p>双标记成对出现，有开有关</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">ex:<span class="tag">&lt;<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
+
+<p>(2).单标记(非封闭类型标记，空标记)</p>
+<p>&lt;关键字&gt;  或者  &lt;关键字/&gt;</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">ex：<span class="tag">&lt;<span class="name">input</span>/&gt;</span>  <span class="tag">&lt;<span class="name">br</span>/&gt;</span>  <span class="tag">&lt;<span class="name">img</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>标签的嵌套</p>
+<p>在一对标签内部，出现另一对或者另一个标签，组合形成功能的叠加</p>
+<p>学习html第二步，背嵌套顺序</p>
+<p>语法：缩进，嵌套顺序</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;标签1&gt;</span><br><span class="line"></span><br><span class="line"> &lt;标签2&gt;</span><br><span class="line"></span><br><span class="line">  &lt;标签3&gt;&lt;&#x2F;标签3&gt;</span><br><span class="line"></span><br><span class="line"> &lt;&#x2F;标签2&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;标签1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>属性和值</p>
+<p>通过属性和值，对标签进行修饰</p>
+<p>&lt;标签 属性1=”值1” 属性2=”值2” …&gt;&lt;/标签&gt;</p>
+<p>(1)标准属性，通用属性，所有标签都有的属性</p>
+<p>id:定义元素在页面中唯一的标识</p>
+<p>title：鼠标悬停在元素生显示的文本</p>
+<p>style：css中，定义内联样式</p>
+<p>class：css中，引用类选择器时使用</p>
+<p>(2)专有属性，只针对一个标签起作用的属性</p>
+<h3 id="6-html的文档结构"><a href="#6-html的文档结构" class="headerlink" title="6.html的文档结构"></a>6.html的文档结构</h3><p>html文档的构成</p>
+<p>(1)文档类型声明</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>告诉浏览器，解析运行本篇代码，使用h5的规则解析</p>
+<p>(2)网页的结构</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">表示网页的开始和结束。一个html文件中只能有一对html标签</span><br><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span> 网页头部，定义网页的信息</span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span> 网页主体，展示内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>HTML</category>

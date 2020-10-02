@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/html/html%E7%9A%84%E7%89%B9%E7%82%B9.png">
 <meta property="article:published_time" content="2020-08-29T13:21:01.000Z">
-<meta property="article:modified_time" content="2020-10-02T14:10:41.614Z">
+<meta property="article:modified_time" content="2020-10-02T14:27:55.448Z">
 <meta property="article:author" content="李文">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
@@ -229,7 +229,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-02 22:10:41" itemprop="dateModified" datetime="2020-10-02T22:10:41+08:00">2020-10-02</time>
+                <time title="修改时间：2020-10-02 22:27:55" itemprop="dateModified" datetime="2020-10-02T22:27:55+08:00">2020-10-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -295,8 +295,50 @@
 <p>safari、chrome、firefox、opera、ie</p>
 <p>(3)浏览器端的技术</p>
 <p>html5、css3、javascript</p>
-<p>3、html的特点</p>
-<p><img src="/images/html/html%E7%9A%84%E7%89%B9%E7%82%B9.png"></p>
+<h3 id="4-html的特点"><a href="#4-html的特点" class="headerlink" title="4.html的特点"></a>4.html的特点</h3><p><img src="/images/html/html%E7%9A%84%E7%89%B9%E7%82%B9.png"></p>
+<p>(1)以.html或者.htm为后缀</p>
+<p>(2)由浏览器解析执行</p>
+<p>(3)用&lt;&gt;来定义标记</p>
+<p>(4)可以嵌套js脚本</p>
+<h3 id="5-html语法"><a href="#5-html语法" class="headerlink" title="5.html语法"></a>5.html语法</h3><p>标记：分为两类</p>
+<p>(1).双标记（封闭类型标记）</p>
+<p>&lt;关键字&gt;&lt;/关键字&gt;</p>
+<p>双标记成对出现，有开有关</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ex:<span class="tag">&lt;<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
+
+<p>(2).单标记(非封闭类型标记，空标记)</p>
+<p>&lt;关键字&gt;  或者  &lt;关键字/&gt;</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ex：<span class="tag">&lt;<span class="name">input</span>/&gt;</span>  <span class="tag">&lt;<span class="name">br</span>/&gt;</span>  <span class="tag">&lt;<span class="name">img</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>标签的嵌套</p>
+<p>在一对标签内部，出现另一对或者另一个标签，组合形成功能的叠加</p>
+<p>学习html第二步，背嵌套顺序</p>
+<p>语法：缩进，嵌套顺序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;标签1&gt;</span><br><span class="line"></span><br><span class="line"> &lt;标签2&gt;</span><br><span class="line"></span><br><span class="line">  &lt;标签3&gt;&lt;&#x2F;标签3&gt;</span><br><span class="line"></span><br><span class="line"> &lt;&#x2F;标签2&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;标签1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>属性和值</p>
+<p>通过属性和值，对标签进行修饰</p>
+<p>&lt;标签 属性1=”值1” 属性2=”值2” …&gt;&lt;/标签&gt;</p>
+<p>(1)标准属性，通用属性，所有标签都有的属性</p>
+<p>id:定义元素在页面中唯一的标识</p>
+<p>title：鼠标悬停在元素生显示的文本</p>
+<p>style：css中，定义内联样式</p>
+<p>class：css中，引用类选择器时使用</p>
+<p>(2)专有属性，只针对一个标签起作用的属性</p>
+<h3 id="6-html的文档结构"><a href="#6-html的文档结构" class="headerlink" title="6.html的文档结构"></a>6.html的文档结构</h3><p>html文档的构成</p>
+<p>(1)文档类型声明</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>告诉浏览器，解析运行本篇代码，使用h5的规则解析</p>
+<p>(2)网页的结构</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">表示网页的开始和结束。一个html文件中只能有一对html标签</span><br><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span> 网页头部，定义网页的信息</span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span> 网页主体，展示内容</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 
     </div>
 
@@ -379,7 +421,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-web%E4%B8%8Einternet%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">1.web与internet的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-internet%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E9%83%BD%E4%BC%9A%E5%88%86%E6%88%90%E4%B8%A4%E7%B1%BB"><span class="nav-text">2.internet上的应用程序都会分成两类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-web%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="nav-text">3.web运行原理</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-web%E4%B8%8Einternet%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">1.web与internet的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-internet%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E9%83%BD%E4%BC%9A%E5%88%86%E6%88%90%E4%B8%A4%E7%B1%BB"><span class="nav-text">2.internet上的应用程序都会分成两类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-web%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="nav-text">3.web运行原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-html%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">4.html的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-html%E8%AF%AD%E6%B3%95"><span class="nav-text">5.html语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-html%E7%9A%84%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="nav-text">6.html的文档结构</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
