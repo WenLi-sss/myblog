@@ -228,6 +228,22 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaScripts笔记</title>
+    <url>/2020/08/28/JS%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>JavsScripts笔记</p>
+<a id="more"></a> 
+
+<h4 id="创建一个9-9乘法口诀表"><a href="#创建一个9-9乘法口诀表" class="headerlink" title="创建一个9*9乘法口诀表"></a>创建一个9*9乘法口诀表</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(var i&#x3D;1;i&lt;&#x3D;9;i++) &#x2F;&#x2F;创建外层循环，控制循环的行数-i</span><br><span class="line">&#123;</span><br><span class="line">    for(var j&#x3D;1,str&#x3D;&#39;&#39;;j&lt;&#x3D;i;j++)&#123; &#x2F;&#x2F;创建内层循环，控制循环的列数-j</span><br><span class="line">        str+&#x3D;j+&#39;*&#39;+i+&#39;&#x3D;&#39;+(i*j)+&#39;  &#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(str);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*打印结果</span><br><span class="line">1*2&#x3D;2  2*2&#x3D;4  </span><br><span class="line">1*3&#x3D;3  2*3&#x3D;6  3*3&#x3D;9  </span><br><span class="line">1*4&#x3D;4  2*4&#x3D;8  3*4&#x3D;12  4*4&#x3D;16  </span><br><span class="line">1*5&#x3D;5  2*5&#x3D;10  3*5&#x3D;15  4*5&#x3D;20  5*5&#x3D;25  </span><br><span class="line">1*6&#x3D;6  2*6&#x3D;12  3*6&#x3D;18  4*6&#x3D;24  5*6&#x3D;30  6*6&#x3D;36  </span><br><span class="line">1*7&#x3D;7  2*7&#x3D;14  3*7&#x3D;21  4*7&#x3D;28  5*7&#x3D;35  6*7&#x3D;42  7*7&#x3D;49  </span><br><span class="line">1*8&#x3D;8  2*8&#x3D;16  3*8&#x3D;24  4*8&#x3D;32  5*8&#x3D;40  6*8&#x3D;48  7*8&#x3D;56  8*8&#x3D;64  </span><br><span class="line">1*9&#x3D;9  2*9&#x3D;18  3*9&#x3D;27  4*9&#x3D;36  5*9&#x3D;45  6*9&#x3D;54  7*9&#x3D;63  8*9&#x3D;72  9*9&#x3D;81 </span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>JavaScripts</category>
+      </categories>
+      <tags>
+        <tag>JavaScripts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS中this的指向</title>
     <url>/2020/09/10/JS%E4%B8%ADthis%E7%9A%84%E6%8C%87%E5%90%91/</url>
     <content><![CDATA[<p>2020.9.10记</p>
@@ -241,22 +257,6 @@
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.num = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> fn();</span><br><span class="line"><span class="built_in">console</span>.log(a.num); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
 
 <p><a href="https://www.cnblogs.com/pssp/p/5216085.html">彻底理解this的用法</a></p>
-]]></content>
-      <categories>
-        <category>JavaScripts</category>
-      </categories>
-      <tags>
-        <tag>JavaScripts</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScripts笔记</title>
-    <url>/2020/08/28/JS%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>JavsScripts笔记</p>
-<a id="more"></a> 
-
-<h4 id="创建一个9-9乘法口诀表"><a href="#创建一个9-9乘法口诀表" class="headerlink" title="创建一个9*9乘法口诀表"></a>创建一个9*9乘法口诀表</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(var i&#x3D;1;i&lt;&#x3D;9;i++) &#x2F;&#x2F;创建外层循环，控制循环的行数-i</span><br><span class="line">&#123;</span><br><span class="line">    for(var j&#x3D;1,str&#x3D;&#39;&#39;;j&lt;&#x3D;i;j++)&#123; &#x2F;&#x2F;创建内层循环，控制循环的列数-j</span><br><span class="line">        str+&#x3D;j+&#39;*&#39;+i+&#39;&#x3D;&#39;+(i*j)+&#39;  &#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(str);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*打印结果</span><br><span class="line">1*2&#x3D;2  2*2&#x3D;4  </span><br><span class="line">1*3&#x3D;3  2*3&#x3D;6  3*3&#x3D;9  </span><br><span class="line">1*4&#x3D;4  2*4&#x3D;8  3*4&#x3D;12  4*4&#x3D;16  </span><br><span class="line">1*5&#x3D;5  2*5&#x3D;10  3*5&#x3D;15  4*5&#x3D;20  5*5&#x3D;25  </span><br><span class="line">1*6&#x3D;6  2*6&#x3D;12  3*6&#x3D;18  4*6&#x3D;24  5*6&#x3D;30  6*6&#x3D;36  </span><br><span class="line">1*7&#x3D;7  2*7&#x3D;14  3*7&#x3D;21  4*7&#x3D;28  5*7&#x3D;35  6*7&#x3D;42  7*7&#x3D;49  </span><br><span class="line">1*8&#x3D;8  2*8&#x3D;16  3*8&#x3D;24  4*8&#x3D;32  5*8&#x3D;40  6*8&#x3D;48  7*8&#x3D;56  8*8&#x3D;64  </span><br><span class="line">1*9&#x3D;9  2*9&#x3D;18  3*9&#x3D;27  4*9&#x3D;36  5*9&#x3D;45  6*9&#x3D;54  7*9&#x3D;63  8*9&#x3D;72  9*9&#x3D;81 </span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>JavaScripts</category>
@@ -620,7 +620,7 @@
 <p> 练习：声明变量保存4个英文字母，无限循环弹出提示框，输入验证码(不区分大小写)，如果输入正确结束循环。</p>
 <p> 06_code.js  06_code.html</p>
 <p> slice(start, end)  截取字符串，start开始的下标，end结束的下标，不包含end本身；如果为负数表示倒数；end为空截取到最后。</p>
-<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#116;&#x6f;&#x6d;&#49;&#x32;&#51;&#52;&#x35;&#54;&#64;&#49;&#54;&#51;&#46;&#x63;&#111;&#x6d;">&#116;&#x6f;&#x6d;&#49;&#x32;&#51;&#52;&#x35;&#54;&#64;&#49;&#54;&#51;&#46;&#x63;&#111;&#x6d;</a></p>
+<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#116;&#x6f;&#x6d;&#x31;&#x32;&#x33;&#52;&#53;&#54;&#x40;&#x31;&#x36;&#51;&#x2e;&#x63;&#111;&#x6d;">&#116;&#x6f;&#x6d;&#x31;&#x32;&#x33;&#52;&#53;&#54;&#x40;&#x31;&#x36;&#51;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p> substr(start, count)  截取字符串，start开始的下标，count截取的长度，如果count为空截取到最后，start为负数表示倒数</p>
 <p> 练习：声明变量保存身份证号，截取出年月日和性别；打印“1998年06月20日 性别女”</p>
 <p>  110236199806202589</p>
