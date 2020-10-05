@@ -68,34 +68,37 @@
 <p> process.version  查看当前nodejs的版本号</p>
 <p> process.pid  查看当前的进程编号</p>
 <p> process.kill()  结束某个编号的进程</p>
-<p> (3)Buffer对象——缓冲区</p>
-<p> 一块用于临时存储数据的内存区域，可以存储文件数据、网络上传输的资源(视频、在线直播…)</p>
+<h4 id="3-Buffer对象——缓冲区"><a href="#3-Buffer对象——缓冲区" class="headerlink" title="(3)Buffer对象——缓冲区"></a>(3)Buffer对象——缓冲区</h4><p> 一块用于临时存储数据的内存区域，可以存储文件数据、网络上传输的资源(视频、在线直播…)</p>
 <p> 创建Buffer</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> buf=<span class="built_in">global</span>.Buffer.alloc(<span class="number">5</span>,<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(buf);<span class="comment">//&lt;Buffer 61 61 61 61 61&gt;</span></span><br><span class="line"><span class="built_in">console</span>.log(buf.toString());<span class="comment">//aaaaa</span></span><br></pre></td></tr></table></figure>
+
 <p>   var buf=Buffer.alloc(5, ‘abcde’)</p>
 <p>   buffer数据 &lt;Buffer 61 62 63 64 65&gt;</p>
 <p> 将buffer数据转为字符串</p>
 <p>   buf.toString()</p>
-<p>4.模块</p>
-<p> 模块就是一个封装好的功能体</p>
+<h3 id="4-模块"><a href="#4-模块" class="headerlink" title="4.模块"></a>4.模块</h3><p> 模块就是一个封装好的功能体</p>
 <p> 在nodejs下模块分为自定义模块、核心模块(官方提供)、第三方模块</p>
-<p> (1)自定义模块</p>
-<p>  在nodejs下，任意一个js文件都是一块模块，文件中的代码默认被一个构造函数所包含</p>
-<table>
-<thead>
-<tr>
-<th>(function(exports,require,module,__filename,__dirname){ //程序员编写的代码})</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>__filename  当前模块的完整路径和文件名称__dirname  当前模块的完整路径require() 引入一个模块module  指代当前的模块对象module.exports  当前模块导出的对象，包含供其它模块使用的属性和方法exports 等价于module.exports</td>
-</tr>
-</tbody></table>
-<p> 练习：在07_2.js声明变量b，创建函数fn，导出变量和函数。</p>
-<p>课后任务</p>
-<p> (1)复习今天内容，整理思维导图</p>
-<p> (2)练习</p>
+<h4 id="1-自定义模块"><a href="#1-自定义模块" class="headerlink" title="(1)自定义模块"></a>(1)自定义模块</h4><p>  在nodejs下，任意一个js文件都是一块模块，文件中的代码默认被一个构造函数所包含</p>
+<p><strong>(function(exports,require,module,__filename,__dirname){ //程序员编写的代码})</strong></p>
+<p><strong>filename  当前模块的完整路径和文件名称</strong></p>
+<p>dirname  当前模块的完整路径</p>
+<p>require() 引入一个模块</p>
+<p>module  指代当前的模块对象</p>
+<p>module.exports  当前模块导出的对象，包含供其它模块使用的属性和方法</p>
+<p>exports 等价于module.exports</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(_filename);<span class="comment">//当前模块的完整路径和文件名称</span></span><br><span class="line"><span class="built_in">console</span>.log(_dirname);<span class="comment">//当前模块的完整路径</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./02.js&#x27;</span>)<span class="comment">//引入同一级的02.js模块</span></span><br><span class="line"><span class="comment">//把02.js模块导出的结果放入到变量中</span></span><br><span class="line"><span class="keyword">var</span> obj=<span class="built_in">require</span>(<span class="string">&#x27;./02.js&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br><span class="line"><span class="built_in">console</span>.log(obj.mya);</span><br><span class="line"><span class="comment">//调用函数</span></span><br><span class="line">obj.fn();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;02.js</span><br><span class="line">console.log(&#39;02.js&#39;);</span><br><span class="line">var a&#x3D;1;</span><br><span class="line">&#x2F;&#x2F;导出：公开哪些变量或者函数</span><br><span class="line">&#x2F;&#x2F;默认导出的是一个空对象</span><br><span class="line">&#x2F;&#x2F;添加导出的内容，就是往导出的对象中添加属性和方法</span><br><span class="line">&#x2F;&#x2F;module 指代当前的模块对象</span><br><span class="line">&#x2F;&#x2F;module.exports 当前模块导出的对象，包含供其他模块是用的属性和方法</span><br><span class="line">module.exports.mya&#x3D;a;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;在02.js中声明变量b，创建函数fn，导出变量和函数</span><br><span class="line">console.log(&#39;02.js&#39;);</span><br><span class="line">var a&#x3D;1;</span><br><span class="line">var b&#x3D;2;</span><br><span class="line">function fn()&#123;</span><br><span class="line">console.log(3);</span><br><span class="line">&#125;</span><br><span class="line">module.exports.mya&#x3D;a;</span><br><span class="line">module.exports.b&#x3D;b;</span><br><span class="line">module.exports.fn&#x3D;fn;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>  创建两个模块main.js（主模块），circle.js(功能模块)，在功能模块中创建两个函数，传递1个参数半径，计算圆的周长和面积，导出这两个函数；在主模块中引入功能模块，并调用两个方法</p>
-<p> (3)预习核心模块下的querystring，url，fs</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">var</span> obj=<span class="built_in">require</span>(<span class="string">&#x27;./circle.js&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(circle);</span><br><span class="line"><span class="built_in">console</span>.log(obj.getLength(<span class="number">1</span>));</span><br><span class="line"><span class="built_in">console</span>.log(obj.getArea(<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//circle.js</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLength</span>(<span class="params">r</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>*<span class="built_in">Math</span>.PI*r;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArea</span>(<span class="params">r</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.PI*<span class="built_in">Math</span>.row(r,<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports.getCircle=getCircle;</span><br><span class="line"><span class="built_in">module</span>.exports.getLength=getLength;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>Nodejs</category>
@@ -300,7 +303,7 @@
 <p> 练习：声明变量保存4个英文字母，无限循环弹出提示框，输入验证码(不区分大小写)，如果输入正确结束循环。</p>
 <p> 06_code.js  06_code.html</p>
 <p> slice(start, end)  截取字符串，start开始的下标，end结束的下标，不包含end本身；如果为负数表示倒数；end为空截取到最后。</p>
-<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#116;&#111;&#109;&#49;&#x32;&#x33;&#x34;&#53;&#54;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#x6d;">&#116;&#111;&#109;&#49;&#x32;&#x33;&#x34;&#53;&#54;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
+<p> 练习：声明变量保存邮箱，分别截取出邮箱的用户名和域名  <a href="mailto:&#x74;&#111;&#109;&#x31;&#50;&#x33;&#x34;&#53;&#54;&#x40;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;">&#x74;&#111;&#109;&#x31;&#50;&#x33;&#x34;&#53;&#54;&#x40;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p> substr(start, count)  截取字符串，start开始的下标，count截取的长度，如果count为空截取到最后，start为负数表示倒数</p>
 <p> 练习：声明变量保存身份证号，截取出年月日和性别；打印“1998年06月20日 性别女”</p>
 <p>  110236199806202589</p>
