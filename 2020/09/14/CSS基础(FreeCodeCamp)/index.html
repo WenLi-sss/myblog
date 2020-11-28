@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="2020.9.14记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS基础（FreeCodeCamp）">
+<meta property="og:url" content="http://yoursite.com/2020/09/14/CSS%E5%9F%BA%E7%A1%80(FreeCodeCamp)/index.html">
+<meta property="og:site_name" content="李文のBLOG">
+<meta property="og:description" content="2020.9.14记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-14T10:04:03.000Z">
+<meta property="article:modified_time" content="2020-11-20T07:02:53.715Z">
+<meta property="article:author" content="李文">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/09/14/CSS%E5%9F%BA%E7%A1%80(FreeCodeCamp)/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>CSS基础（FreeCodeCamp） | 李文のBLOG</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">李文のBLOG</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">一些有趣的事情</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/WenLi-sss" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/14/CSS%E5%9F%BA%E7%A1%80(FreeCodeCamp)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="李文">
+      <meta itemprop="description" content="好运 降临">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="李文のBLOG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS基础（FreeCodeCamp）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-14 18:04:03" itemprop="dateCreated datePublished" datetime="2020-09-14T18:04:03+08:00">2020-09-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-20 15:02:53" itemprop="dateModified" datetime="2020-11-20T15:02:53+08:00">2020-11-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>2020.9.14记</p>
+<a id="more"></a>
+
+<p>1、更改文本的颜色</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//改变h2元素为蓝色</span><br><span class="line">&lt;h2 style=&quot;color:blue;&quot;&gt;catphotoapp&lt;/h2&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、使用元素选择器来设置元素的样式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//创建一个style声明区域，在该区域内，创建一个元素选择器</span><br><span class="line">//使所有h2元素变成红色</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">  <span class="selector-tag">h2</span> &#123;<span class="attribute">color</span>: red;&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、使用class选择器设置单个元素的样式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//在&lt;style&gt;样式声明区域里，创建一个名为blue-text的class选择器</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.blue-text</span>&#123;</span><br><span class="line"><span class="attribute">color</span>:blue;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4、使用class选择器设置多个元素的样式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//将red-text class选择器应用在第一个p元素上</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.red-text</span>&#123;</span><br><span class="line"><span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;p class=&quot;red-text&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>5、更改元素的字体大小</p>
+<p>字体大小由font-size属性控制</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//在包含red-text class选择器的&lt;style&gt;声明区域的里面创建一个p元素样式规则，并设置font-size为16px</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.red-text</span>&#123;</span><br><span class="line"><span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line"><span class="attribute">font-szie</span>:<span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>6、设置元素的字体家族</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//如果你想设置h2元素的字体为sans-serif，你可以使用以下的CSS规则</span><br><span class="line"><span class="selector-tag">h2</span>&#123;</span><br><span class="line"><span class="attribute">font-family</span>:sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>7、引入谷歌字体</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//将链接放到style标签之前</span><br><span class="line">&lt;link href=&quot;https://fonts.googleapis.com/css?family=Lobster&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;style&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>8、字体如何优雅降级</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//Helvetica不可用时，降级使用sans-serif字体</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line"><span class="attribute">font-family</span>:Helvetica，sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>9、调整图片的大小</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//创建一个larger-image的CSS class来控制HTML元素的宽度为500px</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.larger-image</span>&#123;</span><br><span class="line"><span class="attribute">width</span>:<span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>10、在元素周围添加边框</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.thin-red-border</span>&#123;</span><br><span class="line"><span class="attribute">border-color</span>:red;</span><br><span class="line"><span class="attribute">border-width</span>:<span class="number">5px</span>;</span><br><span class="line"><span class="attribute">border-style</span>:solid;</span><br><span class="line"><span class="attribute">border-radius</span>:<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>在一个元素上可以应用多个class，通过使用空格来分隔</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img class=&quot;class1 class2&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>11、设置元素的id</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//设置h2元素的id为cat-photo-app</span><br><span class="line">&lt;h2 id=&quot;cat-photo-app&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>12、使用id属性来设定元素的样式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在style标签中写入</span></span><br><span class="line">#cat-photo-element &#123;</span><br><span class="line">  background-color: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//注意在style标签里，声明 class 的时候必须在名字前插入.符号。同样，在声明 id 的时候，也必须在名字前插入#符号</span></span><br></pre></td></tr></table></figure>
+
+<p>13、CSS基础：调整元素的内外边距</p>
+<p>每个 HTML 元素周围的矩形空间由三个重要的属性来控制：padding（内边距），margin（外边距）和border（边框）</p>
+<p>padding控制着元素内容与border之间的空隙大小。</p>
+<p>margin（外边距）控制元素的边框与其他元素之间的距离。</p>
+<p>如果你设置元素margin为负值，元素会变得更大。</p>
+<p>CSS 允许你使用<code>padding-top</code>，<code>padding-right</code>， <code>padding-bottom</code>和<code>padding-left</code>属性来设置四个不同方向的<code>padding</code>值。</p>
+<p>CSS 允许你使用<code>margin-top</code>，<code>margin-right</code>，<code>margin-bottom</code>和<code>margin-left</code>属性来设置四个不同方向的<code>margin</code>值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">padding: <span class="number">10</span>px <span class="number">20</span>px <span class="number">10</span>px <span class="number">20</span>px;</span><br></pre></td></tr></table></figure>
+
+<p>这四个值按顺时针排序：上，右，下，左，并且设置的效果等同于特定声明每一个方向的<code>padding</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: <span class="number">10</span>px <span class="number">20</span>px <span class="number">10</span>px <span class="number">20</span>px;</span><br></pre></td></tr></table></figure>
+
+<p>这四个值按顺时针排序：上，右，下，左，并且设置的效果等同于特定声明每一个方向的<code>margin</code>。</p>
+<p>14、CSS基础：使用属性选择器来设置元素的样式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[type=<span class="string">&#x27;radio&#x27;</span>] &#123;</span><br><span class="line">  margin: <span class="number">20</span>px <span class="number">0</span>px <span class="number">20</span>px <span class="number">0</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>15、CSS基础：Class选择器的优先级高于继承样式</p>
+<p>在<code>&lt;style&gt;</code>标签里面声明的<code>class</code>顺序十分重要。第二个声明始终优于第一个声明。因为<code>.blue-text</code>在<code>.pink-text</code>的后面声明，所以<code>.blue-text</code>会覆盖<code>.pink-text</code>的样式。</p>
+<p>16、CSS基础：ID选择器优先级高于Class选择器</p>
+<p>注意：无论在class 的上面或者下面声明，id 选择器的优先级总是会高于 class 选择器,id 选择器无论在<code>style</code>标签哪里声明，都会覆盖 class 声明的样式，</p>
+<p>17、CSS基础：内联样式的优先级高于ID选择器</p>
+<p>行内样式会覆盖<code>style</code>标签里面所有的 CSS 声明。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 style=<span class="string">&quot;color:wihte&gt;&lt;/h1</span></span><br></pre></td></tr></table></figure>
+
+<p>18、CSS基础：Important的优先级最高</p>
+<p>在很多时候，你使用 CSS 库，有时候它们声明的样式会意外的覆盖你的 CSS 样式。当你需要保证你的 CSS 样式不受影响，你可以使用<code>!important</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">color: red !important;</span><br></pre></td></tr></table></figure>
+
+<p>19、CSS基础：使用十六进制编码获得指定颜色</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  color: #000000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>20、CSS基础：使用十六进制编码混合颜色</p>
+<p>21、CSS基础：使用RGB值为元素上色</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background-color: rgb(<span class="number">255</span>, <span class="number">165</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>22、CSS基础：创建一个自定义的CSS变量</p>
+<p>在penguin中创建一个–penguin-skin：gray</p>
+<p>23、CSS基础：使用一个自定义的CSS变量</p>
+<p>创建变量后，CSS 属性可以通过引用变量名来使用它的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: <span class="keyword">var</span>(--penguin-skin);</span><br></pre></td></tr></table></figure>
+
+<p>24、CSS基础：给CSS变量附加回退值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: <span class="keyword">var</span>(--penguin-skin, black);</span><br></pre></td></tr></table></figure>
+
+<p>25、CSS基础：层级CSS变量</p>
+<p>就像<code>html</code>是<code>body</code>的容器一样，你也可以认为<code>:root</code>元素是你整个 HTML 文档的容器。在<code>:root</code>创建的变量，在整个网页里面都能生效。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:root&#123;</span><br><span class="line">--penguin-skin:green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>26、CSS基础：更改特定区域的变量</p>
+<p>当你在<code>:root</code>里创建变量时，这些变量的作用域是整个页面。</p>
+<p>如果在元素里创建相同的变量，会重写<code>:root</code>变量设置的值</p>
+<p>27、CSS基础：使用媒体查询更改变量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@media (max-width: <span class="number">350</span>px) &#123;</span><br><span class="line">    :root &#123;</span><br><span class="line">      </span><br><span class="line">      <span class="comment">/* add code below */</span></span><br><span class="line">      --penguin-size:<span class="number">20</span>px;</span><br><span class="line">      --penguin-skin:black;</span><br><span class="line">      <span class="comment">/* add code above */</span></span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/30/Nodejs%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AF%B9%E8%B1%A1/" rel="prev" title="Nodejs函数与对象">
+      <i class="fa fa-chevron-left"></i> Nodejs函数与对象
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/10/JS%E4%B8%ADthis%E7%9A%84%E6%8C%87%E5%90%91/" rel="next" title="JS中this的指向">
+      JS中this的指向 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+    <aside class="sidebar">
+    <div class="sidebar-inner">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="李文"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">李文</p>
+  <div class="site-description" itemprop="description">好运 降临</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/WenLi-sss" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;WenLi-sss" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:liwen_sss@163.com" title="E-Mail → mailto:liwen_sss@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/shuai_xiansen" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;shuai_xiansen" rel="noopener" target="_blank"><i class="fab fa-CSDN fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86  src="//music.163.com/outchain/player?type=2&id=1344897943&auto=0&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">李文</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+<a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">鄂ICP备2020016076号</a>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script type="text/javascript" src="/next/source/lib/clipboard/src/clipboard.js"></script>
+<script type="text/javascript" src="/next/source/js/src/custom.js"></script>
+</body>
+</html>
